@@ -1,17 +1,13 @@
 name: Django CICD App
 
 on:
-  pull_request_target:
+  push:
     branches:
-      - master
-    types:
-      - closed
+      - main
 
 jobs:
   # jobname
   build-deploy:
-    # 수행 조건
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
