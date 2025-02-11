@@ -3,7 +3,7 @@ name: Django CICD App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   # jobname
